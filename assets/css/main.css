@@ -3109,6 +3109,21 @@ input, select, textarea {
 						display: inline;
 					}
 
+		/* Panel */
+		#panel {
+			background-attachment: scroll;
+			background-position: top left, center center;
+			background-size: auto,		cover;
+			left: auto;
+			padding: 1em 1em;
+			position: relative;
+			text-align: center;
+			top: auto;
+			width: 100%;
+			display: block;
+		}
+
+
 		/* Footer */
 
 			#footer {
@@ -3199,6 +3214,10 @@ input, select, textarea {
 				#header h1 {
 					font-size: 1.35em;
 				}
+		/* Panel */
+		#panel {
+			padding: 1.0em 1.0em;
+		}
 
 		/* Footer */
 
