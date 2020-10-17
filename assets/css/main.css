@@ -17,7 +17,7 @@ form, label, legend, table, caption, tbody,
 tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
-section, summary, time, mark, audio, video {
+section, summary, time, mark, audio, video, panel {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -26,7 +26,7 @@ section, summary, time, mark, audio, video {
 	vertical-align: baseline;}
 
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+footer, header, hgroup, menu, nav, section, panel {
 	display: block;}
 
 body {
@@ -1767,7 +1767,7 @@ input, select, textarea {
 	header p {
 		color: #b2b2b2;
 		position: relative;
-		margin: 0 0 1.5em 0;
+		margin: 0 0 0 0;
 	}
 
 	header h2 + p {
@@ -2589,8 +2589,8 @@ input, select, textarea {
 		align-items: flex-end;
 		-moz-justify-content: space-between;
 		-webkit-justify-content: space-between;
-		-ms-justify-content: space-between;
-		justify-content: space-between;
+		-ms-justify-content: space-evenly;
+		justify-content: space-evenly;
 		background-color: #1f1815;
 		background-attachment: scroll,								scroll;
 		background-image: url("images/overlay.png"), url("../../images/bg.jpg");
@@ -2604,7 +2604,7 @@ input, select, textarea {
 		position: fixed;
 		text-align: right;
 		top: 0;
-		width: 35%;
+		width: 20%;
 	}
 
 		#header > * {
@@ -2613,6 +2613,7 @@ input, select, textarea {
 			-ms-flex-shrink: 0;
 			flex-shrink: 0;
 			width: 100%;
+			/* justify-content: space-evenly; */
 		}
 
 		#header > .inner {
@@ -2620,7 +2621,7 @@ input, select, textarea {
 			-webkit-flex-grow: 1;
 			-ms-flex-grow: 1;
 			flex-grow: 1;
-			margin: 0 0 2em 0;
+			margin: 1em 0 2em 0;
 		}
 
 		#header strong, #header b {
@@ -2640,8 +2641,43 @@ input, select, textarea {
 
 		#header .image.avatar {
 			margin: 0 0 1em 0;
-			width: 6.25em;
+			width: 8.0em;
 		}
+
+
+/* Right Panel*/
+#panel {
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-moz-flex-direction: column;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-moz-align-items: -moz-flex-end;
+	-webkit-align-items: -webkit-flex-end;
+	-ms-align-items: -ms-flex-end;
+	align-items: flex-end;
+	-moz-justify-content: space-between;
+	-webkit-justify-content: space-between;
+	-ms-justify-content: space-evenly;
+	justify-content: space-evenly;
+	background-color: #1f1815;
+	background-attachment: scroll,								scroll;
+	background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+	background-position: top left,							top left;
+	background-repeat: repeat,								no-repeat;
+	background-size: auto,								150%;
+	color: rgba(255, 255, 255, 0.5);
+	height: 100%;
+	right: 0;
+	padding: 1em 1em;
+	position: fixed;
+	text-align: right;
+	top: 0;
+	width: 20%;
+}
 
 /* Footer */
 
@@ -2657,7 +2693,7 @@ input, select, textarea {
 		color: rgba(255, 255, 255, 0.4);
 		font-size: 0.8em;
 		list-style: none;
-		margin: 1em 0 0 0;
+		margin: 0em 0 0 0;
 		padding: 0;
 	}
 
@@ -2682,7 +2718,7 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		margin-left: 35%;
+		margin-left: 20%;
 		max-width: 54em;
 		padding: 8em 4em 4em 4em;
 		width: calc(100% - 35%);
@@ -2997,12 +3033,12 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				padding: 6em 3em 3em 3em;
+				padding: 8em 4em 4em 4em;
 				width: 30%;
 			}
 
 				#header h1 {
-					font-size: 1.25em;
+					font-size: 1.75em;
 				}
 
 					#header h1 br {
@@ -3057,7 +3093,7 @@ input, select, textarea {
 				background-position: top left, center center;
 				background-size: auto,		cover;
 				left: auto;
-				padding: 6em 4em;
+				padding: 8em 5em;
 				position: relative;
 				text-align: center;
 				top: auto;
